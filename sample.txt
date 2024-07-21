@@ -1,6 +1,7 @@
-wget --no-check-certificate -O - https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x93C4A3FD7BB9C367 | sudo apt-key add -
+curl --insecure -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x93C4A3FD7BB9C367 | sudo apt-key add -
 
-sudo sh -c 'echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu noble main" > /etc/apt/sources.list.d/ansible-ubuntu-ansible-noble.list'
+sudo sh -c 'echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main" > /etc/apt/sources.list.d/ansible-ubuntu-ansible-focal.list'
 
 sudo apt-get update
+
 sudo apt-get install ansible
