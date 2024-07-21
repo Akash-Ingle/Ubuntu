@@ -14,3 +14,13 @@ sudo apt-get install ansible
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
     https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
     /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+sudo nano /etc/apt/apt.conf
+
+Acquire::https::Verify-Peer "false";
+Acquire::https::Verify-Host "false";
+
+sudo apt-get update
+
